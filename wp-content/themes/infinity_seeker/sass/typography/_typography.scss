@@ -1,0 +1,152 @@
+@font-face {
+    font-family: "Headings";
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+    /* Read next point */
+    unicode-range: U+000-5FF;
+    /* Download only latin glyphs */
+    src: local("Headings"),
+        url("../fonts/PlayfairDisplay-Bold.woff") format("woff"),
+        url("../fonts/PlayfairDisplay-Bold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Headings Italic";
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+    /* Read next point */
+    unicode-range: U+000-5FF;
+    /* Download only latin glyphs */
+    src: local("Headings Italic"),
+        url("../fonts/PlayfairDisplay-BoldItalic.woff") format("woff"),
+        url("../fonts/PlayfairDisplay-BoldItalic.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Headings Regular Italic";
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+    /* Read next point */
+    unicode-range: U+000-5FF;
+    /* Download only latin glyphs */
+    src: local("Headings Italic"),
+        url("../fonts/PlayfairDisplay-Italic.woff") format("woff"),
+        url("../fonts/PlayfairDisplay-Italic.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Copy";
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    /* Read next point */
+    unicode-range: U+000-5FF;
+    /* Download only latin glyphs */
+    src: local("Copy"), url("../fonts/Muli-Regular.woff") format("woff"),
+        url("../fonts/Muli-Regular.woff2") format("woff2");
+}
+
+body {
+    font-family: Copy;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "Headings";
+}
+
+h1 {
+    font-size: 5.3rem;
+    margin: 8rem 0;
+}
+
+h2 {
+    font-size: 4.2rem;
+    margin-bottom: 3rem;
+    margin-top: 6rem;
+    color: var(--color-black);
+    text-align: center;
+    position: relative;
+    line-height: 1.29;
+
+    &.page-title {
+        margin-bottom: 7rem;
+        @include respond(tab-port) {
+            margin-bottom: 4rem;
+        }
+    }
+
+    @include respond(tab-port) {
+        font-size: 3.8rem;
+        padding: 0 3rem;
+    }
+}
+
+h3 {
+    font-size: 2.4rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    @include respond(tab-port) {
+        text-align: center;
+        padding: 0 3rem;
+    }
+}
+h4 {
+    margin-bottom: 2rem;
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 1.63;
+
+    @include respond(tab-port) {
+        padding: 1rem;
+        text-align: center;
+    }
+}
+
+dfn,
+cite,
+em,
+i {
+    font-style: italic;
+}
+
+blockquote {
+    margin: 0 1.5rem;
+}
+
+address {
+    margin: 0 0 1.5rem;
+}
+
+pre {
+    margin-bottom: 0;
+    max-width: 100%;
+    overflow: auto;
+    padding: 0;
+}
+
+abbr,
+acronym {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+mark,
+ins {
+    text-decoration: none;
+}
+
+big {
+    font-size: 125%;
+}

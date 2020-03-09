@@ -1,0 +1,93 @@
+.navigation {
+  &__nav {
+    text-align: right;
+    li {
+      display: inline-block;
+      margin: 1rem 1.2rem;
+      padding-bottom: 0.7rem;
+      border-bottom: 1px solid var(--color-white);
+      transition: all 0.2s ease-in-out;
+      &.current_page_item,
+      &:hover {
+        border-bottom: 1px solid var(--color-black);
+      }
+    }
+  }
+
+  a {
+    &:link,
+    &:visited {
+      display: inline-block;
+      font-family: "Headings";
+      font-size: 1.4rem;
+      font-weight: 300;
+      color: var(--color-black);
+      text-decoration: none;
+
+      @include respond(tab-port) {
+        font-size: 1.6rem;
+        line-height: 2rem;
+      }
+    }
+  }
+
+  @include respond(tab-port) {
+    display: none;
+    position: fixed;
+    background: white;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+
+    .navigation__nav {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      li {
+        display: block;
+        font-size: 2rem;
+        line-height: 4rem;
+        margin-bottom: 2rem;
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+//FUNCTIONALITY
+
+#navbar-toggler-icon {
+  display: none;
+  &:checked {
+    ~ .navbar-toggler-icon {
+      background-image: url(../images/cross.svg);
+    }
+    ~ .navigation {
+      display: block;
+    }
+  }
+}
+.navbar-toggler-icon {
+  background-image: url(../images/burger.svg);
+  background-repeat: no-repeat;
+  width: 4rem;
+  height: 4rem;
+  margin-right: 2rem;
+  background-size: 100%;
+  z-index: 1;
+  border: none;
+  display: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  @include respond(tab-port) {
+    display: inline-block;
+    z-index: 2;
+    width: 3rem;
+  }
+}

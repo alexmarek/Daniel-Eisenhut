@@ -1,0 +1,20 @@
+body .cc-revoke,
+body .cc-window {
+    font-family: Copy;
+}
+
+body .cc-window.cc-floating .cc-compliance {
+    width: 35%;
+    margin: auto;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+
+    a {
+        border-radius: 3px;
+        font-weight: 600;
+
+        &:hover {
+            background: #FEAA01;
+        }
+    }
+}

@@ -1,0 +1,25 @@
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+
+  &:visited {
+    color: var(--color-black);
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: #000;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover,
+  &:active {
+    outline: 0;
+  }
+}

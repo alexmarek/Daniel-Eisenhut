@@ -1,0 +1,72 @@
+.button {
+  &,
+  &:link,
+  &:visited {
+    text-decoration: none;
+    padding: 1.2rem 6rem;
+    display: inline-block;
+    transition: all 0.2s;
+    position: relative;
+    font-family: "Headings Italic";
+    font-size: 1.8rem;
+    border: 0;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    cursor: pointer;
+  }
+
+  &:hover {
+    color: var(--color-grey);
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(var(--color-black), 0.2);
+    color: var(--color-bg-dark);
+  }
+
+  &--white {
+    background-color: var(--color-bg-light);
+    color: var(--color-bg-dark);
+
+    &::after {
+      background-color: var(--color-bg-light);
+    }
+
+    &:hover {
+      color: var(--color-black);
+    }
+  }
+
+  &--animated {
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
+
+  &--text {
+    border: 0;
+    font-size: 2rem;
+    &-archive {
+      padding: 1.2rem !important;
+      margin-left: -1.2rem !important;
+      @include respond(tab-port) {
+        margin-left: 0 !important;
+      }
+    }
+  }
+
+  &--frame {
+    @include border-frame;
+  }
+  &--frame-mid {
+    @include border-frame-mid;
+  }
+  &--frame-larger {
+    @include border-frame-larger;
+  }
+  &--frame-large {
+    @include border-frame-large;
+  }
+}
