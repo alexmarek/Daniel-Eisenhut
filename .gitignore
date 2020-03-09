@@ -10,6 +10,7 @@ Thumbs.db
 # this install specific
 node_modules/
 wp-content/themes/infinity_seeker/.sass-cache/
+wp-content/themes/infinity_seeker/css/
 
 # wordpress specific
 wp-config.php
